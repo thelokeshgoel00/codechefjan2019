@@ -1,0 +1,124 @@
+#include<iostream>
+using namespace std;
+#include<cstdio>
+#include<cmath>
+#include<cstdlib>
+// This is just a default code
+#define abcd 3
+// This will be there in my every program from now.
+#define ef 4
+// I am Hardik Chawla
+#define ghi 5
+// Just playing with codes
+#define jk 6
+// I am pursuing Btech
+#define lm 7
+// But the question arises
+#define nop 67
+// LEave it
+#define qrs 84
+// Even I dont know about the ques.
+#define tuv 27
+// Now lets start the main program
+#define wx 98
+// I think this is what known as driver program
+// I always declare function first and later on describe it.
+int main()
+{
+	int test,i,j,size;
+	double arr1[100002],arr2[100002];
+
+	cin>>test;
+	while(test--)
+	{
+		//scanning size
+		cin>>size;
+		bool check=true,check2=true;
+		//scanning the array elements
+		// first for loop
+		for(i=0;i<size;i++)
+		{
+			cin>>arr1[i];
+			
+		}
+
+		// saala ek aur array h
+		// second for loop
+		for(i=0;i<size;i++)
+		{
+			cin>>arr2[i];
+			if(arr2[i]==0&&check2==true)
+			{
+				check2=true;
+
+			}
+			else
+			{
+				check2=false;
+			}
+		}
+
+		// farji code
+		if(check2==true)
+		{
+			double ans=0.000000000;
+			cout<<ans<<" ";
+			for(i=0;i<size;i++)
+			{
+				cout<<ans<<" ";
+			}
+			cout<<endl;
+		}
+		else
+		{
+			double z=0.00,final[100002];
+			// by this is new code
+			
+			
+			// and even seeming to be the best
+			
+			// bhai bahut socha h
+			
+			
+			// chod majak kr rha tha
+			for(i=0;i<size;i++)
+			{
+				z=(double)(z+arr1[i]*arr2[i]);
+			}
+			double den=0.00;
+			for(i=0;i<size;i++)
+			{
+				den=(double)(den+(1.00/(double)arr1[i]));
+			}
+			// but this all is what known as Lagrange's theorem.
+			z=z/(double)den;
+			double f=0.000;
+			for(i=0;i<size;i++)
+			{
+				final[i]=(z/(double)(arr1[i]*arr1[i]))-arr2[i];
+				if(final[i]+arr2[i]<0)
+				{
+					break;
+				}
+				f=f+(double)sqrt(final[i]+arr2[i]);
+			}
+			if(i<size)
+			{
+				cout<<"-1"<<endl;
+			}
+			else
+			{
+				cout<<f<<" ";
+				for(i=0;i<size;i++)
+				{
+					cout<<final[i]<<" ";
+				}
+				cout<<endl;
+				// I think everything is done now;
+			}
+		}
+		
+	}
+	return 0;
+}
+
